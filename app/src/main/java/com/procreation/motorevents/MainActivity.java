@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<EventModel>> call, Response<List<EventModel>> response) {
                 posts.addAll(response.body());
-                Log.d("tag", "size: " + posts.size());
-                Log.d("tag", "response" + response);
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
 

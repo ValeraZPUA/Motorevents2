@@ -10,13 +10,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class App extends Application {
 
     private static MotoreventsApi motoreventsApi;
-    private Retrofit retrofit;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        retrofit = new Retrofit.Builder()
+        Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.motorevents.com.au/test_api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

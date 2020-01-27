@@ -1,14 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="event"
+            type="com.procreation.motorevents.EventModel" />
+    </data>
 
-    <TextView
-        android:id="@+id/tv_post"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="text"/>
+        android:orientation="vertical"
+        android:layout_margin="20dp">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{event.title}"
+            tools:text="Title"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- "/>
+
+            <TextView
+                android:id="@+id/title_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{event.title_red}"
+                tools:text="Red Title"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(event.startDate)}"
+                tools:text="start date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                tools:text=" - "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(event.endDate)}"
+                tools:text="end date"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/descr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{event.description}"
+            tools:text="description"/>
+
+    </LinearLayout>
+
+</layout>

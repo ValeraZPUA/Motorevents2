@@ -11,7 +11,7 @@ public class EventModel {
 
     @SerializedName("title_red")
     @Expose
-    private String titleRed;
+    private String title_red;
 
     @SerializedName("description")
     @Expose
@@ -19,11 +19,11 @@ public class EventModel {
 
     @SerializedName("startDate")
     @Expose
-    private int startDate;
+    private long startDate;
 
     @SerializedName("endDate")
     @Expose
-    private int endDate;
+    private long endDate;
 
     @SerializedName("eventLogo")
     @Expose
@@ -37,36 +37,20 @@ public class EventModel {
         this.title = title;
     }
 
-    public String getTitleRed() {
-        return titleRed;
-    }
-
-    public void setTitleRed(String titleRed) {
-        this.titleRed = titleRed;
-    }
-
     public String getDescription() {
         return description;
     }
 
+    public String getTitle_red() {
+        return title_red;
+    }
+
+    public void setTitle_red(String title_red) {
+        this.title_red = title_red;
+    }
+
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(int startDate) {
-        this.startDate = startDate;
-    }
-
-    public int getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(int endDate) {
-        this.endDate = endDate;
     }
 
     public String getEventLogo() {
@@ -75,5 +59,21 @@ public class EventModel {
 
     public void setEventLogo(String eventLogo) {
         this.eventLogo = eventLogo;
+    }
+
+    public long getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(long startDate) {
+        this.startDate = startDate;
+    }
+
+    public long getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(long endDate) {
+        this.endDate = endDate;
     }
 }
